@@ -2,7 +2,7 @@
 The minute data for around 6 months of KOSPI top-50 stocks was used for training.
 
 ### Downloading the data
-The data can be downloaded with scrapto.py in kospi-scraper dir.
+The data can be downloaded with scrapto.py in kospi-scraper dir.<br/>
 *Requirements: Windows 32bit, Kiwoom Open Api*
 
 ### Training
@@ -11,8 +11,8 @@ The data can be downloaded with scrapto.py in kospi-scraper dir.
 
 ### Trading simulation
 trading_simulation.py - for combining the data obtained by training with different parameters
-and simulating the trading.
-Currently there are 2 trading strategies:
+and simulating the trading.<br/>
+Currently there are 2 trading strategies:<br/>
 1. Buy when rise (STRATEGY = 'buy_when_rise'): buy when is predicted to rise, sell when predicted to fall and profit is bigger than SELL_WHEN_PROFIT.
 *Try to change SELL_WHEN_PROFIT and BUY_WHEN_PREDICTED to improve the result.*
 2. Buy when rise is 0.7% (STRATEGY = 'buy_when_0.7pct'):
@@ -21,13 +21,13 @@ Currently there are 2 trading strategies:
 - If fall: sell if fall under -1.5%, sell if recovers to 0.34%
 
 ### Initial parameters:
-epochs = 5
-optimizer = 'adagrad'
-loss = 'mean_squared_error'
-REGULARIZATION = False
+- epochs = 5
+- optimizer = 'adagrad'
+- loss = 'mean_squared_error'
+- REGULARIZATION = False
 
 ### The result data is obtained using the following parameters:
-- result-data-12.24-adagrad/:
+**result-data-12.24-adagrad/:** <br/>
  - epochs = 5
  - optimizer = 'adagrad'
  - loss = 'mean_squared_error'
@@ -35,7 +35,7 @@ REGULARIZATION = False
 
 *trained based on OHLC average using StockPricePredictionNoFeatures.py*
 
-- result-data-12.24-volume-adagrad/:
+**result-data-12.24-volume-adagrad/:**<br/>
  - epochs = 5
  - optimizer = 'adagrad'
  - loss = 'mean_squared_error'
@@ -43,7 +43,7 @@ REGULARIZATION = False
 
 *trained based on OHLC average and volume using StockPricePredictionFeatures.py*
 
-- result-data-12.24-adam/:
+**result-data-12.24-adam/:**<br/>
  - epochs = 5
  - optimizer = 'adam'
  - loss = 'mean_squared_error'
@@ -51,7 +51,7 @@ REGULARIZATION = False
 
 *trained based on OHLC average using StockPricePredictionNoFeatures.py*
 
-- result-data-12.24-volume-adam/:
+**result-data-12.24-volume-adam/:**<br/>
  - epochs = 5
  - optimizer = 'adam'
  - loss = 'mean_squared_error'
@@ -59,7 +59,7 @@ REGULARIZATION = False
 
 *trained based on OHLC average and volume using StockPricePredictionFeatures.py*
 
-- result-data-12.24-sgd/:
+**result-data-12.24-sgd/:**<br/>
  - epochs = 5
  - optimizer = 'sgd'
  - loss = 'mean_squared_error'
@@ -67,7 +67,7 @@ REGULARIZATION = False
 
 *trained based on OHLC average using StockPricePredictionNoFeatures.py*
 
-- result-data-12.24-volume-sgd/:
+**result-data-12.24-volume-sgd/:**<br/>
  - epochs = 5
  - optimizer = 'sgd'
  - loss = 'mean_squared_error'
@@ -76,7 +76,7 @@ REGULARIZATION = False
 *trained based on OHLC average and volume using StockPricePredictionFeatures.py*
 
 ### Combining the data
-It was found out that different parameters work best for different stocks.
+It was found out that different parameters work best for different stocks.<br/>
 Therefore, the data obtained by training with different parameters is combined to *combined_log.csv* 
 using trading_simulation.py
 
@@ -84,6 +84,7 @@ using trading_simulation.py
 - NRMSE (normalized root mean squared error) on TEST set is around 0.8% if the data obtained by training with different parameters is combined.
 - NRMSE (normalized root mean squared error) on TRAINING set is around 0.4% if the data obtained by training with different parameters is combined.
 
-The overfitting observed by comparing test NRMSE and train NRMSE most probably occured because the data set is relatively small. However, possibly it can be reduced by adding regularization.
+The overfitting observed by comparing test NRMSE and train NRMSE most probably occured because the data set is relatively small.<br/>
+However, possibly it can be reduced by adding regularization.
 
 - Average daily profit can be 2-5%, depending on the trading strategy used. 
