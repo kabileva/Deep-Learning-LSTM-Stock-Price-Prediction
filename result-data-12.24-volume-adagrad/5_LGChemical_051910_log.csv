@@ -1,0 +1,10 @@
+Max train value,392250.0
+Min train value,302375.0
+Train values range,89875.0
+Train RMSE,425.63806028728436
+Train NRMSE,0.004735889405143637
+Max test value,365875.0
+Min test value,321750.0
+Test values range,44125.0
+Test RMSE,394.94072813460633
+Test NRMSE,0.008950498088036404
