@@ -1,5 +1,5 @@
 ## Simple LSTM model for stock price prediction
-The minute data for around 6 months of KOSPI top-50 stocks was used for training.
+The minute data for around 8 months of KOSPI top-50 stocks was used for training.
 
 ### Downloading the data
 The data can be downloaded with scrapto.py in kospi-scraper dir.<br/>
