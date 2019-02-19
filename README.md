@@ -88,3 +88,6 @@ The overfitting observed by comparing test NRMSE and train NRMSE most probably o
 However, possibly it can be reduced by adding regularization.
 
 - Average daily profit can be 2-5%, depending on the trading strategy used. 
+
+### Ref.: 
+https://github.com/NourozR/Stock-Price-Prediction-LSTM
